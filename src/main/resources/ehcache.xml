@@ -1,0 +1,15 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../main/config/ehcache.xsd">
+	<diskStore path="java.io.tmpdir" />
+	<defaultCache maxEntriesLocalHeap="10" eternal="false"
+		timeToIdleSeconds="5" timeToLiveSeconds="10" overflowToDisk="true" />
+	<!-- Page and Page Fragment Caches -->
+	<cache name="SimplePageCachingFilter" 
+		statistics="true"
+		eternal="true"
+		memoryStoreEvictionPolicy="LRU"
+		maxEntriesLocalDisk="10000000"
+		maxEntriesLocalHeap="100"
+		overflowToDisk="true">
+	</cache>
+</ehcache>
